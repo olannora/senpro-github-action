@@ -34,10 +34,10 @@ jobs:
       - name: Build app on VM
         uses: appeboy/ssh-action@master
         with:
-          host: ${{ secret.HOST }}
-          username: ${{ secret.USERNAME }}
-          password: ${{ secret.PASSWORD }}
-          port: ${{ secret.PORT }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
           script: |
             eval "$(ssh-agent -s)"
             ssh-add ~/.ssh/ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDT4cGQA9fy5MTZB754w+8oyKYd5rw9SuRw9WO4LfYFySr8p07f/rqCVm0EQB6vYHL+5fBpgY0TJpbhg0WyD3GMtCK1REfIVoZP0Dl9MYjCcVRiwQ1LjJm9SQ5ylvB+/6gCeunQKJu+6Tsw3TR/9myEgxsruK7rzAHx84psH6G83xWOlPqRY7zyv3yeEcnxqKjCyntTPLs7IZf/tHSEHmZgzicOdqBwVnDbwQltm5ZN06csRAOvc7vL98fn7KogGKLAmVXRqBsQ0ZuUss65sF0rOoa0Dm1LjcJ06DX+/ipoF6YmNzGjY4yW40DhXbTpOg2P94MyBgiUGMWRJcZr4bIjyKfHj5ShOyCoqBFRO5l9ynPghyFH0/GdB6RMQMX8Xu4q1AlB6bqmH19EbIrfiZwno0aAaVik6fZ7THH7uRC7ONTFmMoCGoq+s5osn8vsmilzsrG/pl9q3105GJSQ8HTHwfJMm3eiRLEih79ox0LIeizIWzMb+hgXWP1JcwEvyirrYuo8tKMd5E+bFCvTX3WxyiSPTEH/9QH6+xSi3sIZ3C8Enq0+qycE1gTSnL4QWyff+TkjTHxztNI4hAJeempB7MmYM3ieNnw6Us54WCjnVPmvvO/dhLrfm71QAuzAGSmCzdE3lCum7A1yniTwe/JKfY4PE7gu3ca1Oc8t+fDy+w== Praktikan26
